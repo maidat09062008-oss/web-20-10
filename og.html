@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>OG cover — Hộp thư mùa thu</title>
+  <link rel="stylesheet" href="assets/fonts/fonts.css">
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      width: 1200px;
+      height: 630px;
+      overflow: hidden;
+      font-family: "Be Vietnam Pro", "Segoe UI", sans-serif;
+      color: #3b2f2a;
+      background: #f7f0e6;
+    }
+    .og {
+      position: relative;
+      width: 1200px;
+      height: 630px;
+      overflow: hidden;
+      background:
+        radial-gradient(760px 560px at 88% 6%, rgba(199, 127, 136, .24), transparent 65%),
+        radial-gradient(620px 520px at 2% 100%, rgba(147, 166, 139, .24), transparent 65%),
+        #f7f0e6;
+    }
+    .og::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: .055;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.42'/%3E%3C/svg%3E");
+      mix-blend-mode: multiply;
+    }
+    .og__frame {
+      position: absolute;
+      inset: 26px;
+      border: 1px solid rgba(59, 47, 42, .14);
+      pointer-events: none;
+    }
+    .og__copy {
+      position: absolute;
+      left: 80px;
+      top: 92px;
+      width: 650px;
+      z-index: 3;
+    }
+    .og__eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin: 0;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: .23em;
+      text-transform: uppercase;
+      color: #9f5560;
+    }
+    .og__eyebrow::before {
+      content: "";
+      width: 42px;
+      height: 1px;
+      background: currentColor;
+    }
+    .og h1 {
+      margin: 22px 0 0;
+      font-family: "Lora", Georgia, serif;
+      font-size: 92px;
+      font-weight: 400;
+      line-height: 1.02;
+      letter-spacing: -.045em;
+    }
+    .og h1 em {
+      display: block;
+      font-style: italic;
+      color: #9f5560;
+    }
+    .og__script {
+      margin: 16px 0 0;
+      font-family: "Dancing Script", cursive;
+      font-size: 41px;
+      font-weight: 600;
+      line-height: 1.1;
+      color: #9f5560;
+    }
+    .og__desc {
+      max-width: 500px;
+      margin: 22px 0 0;
+      font-size: 19px;
+      line-height: 1.65;
+      color: #6e5e56;
+    }
+    .og__bottom {
+      position: absolute;
+      left: 80px;
+      bottom: 54px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: #8b7a70;
+      z-index: 3;
+    }
+    .og__bottom span {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #c77f88;
+      box-shadow: 0 0 0 5px rgba(199, 127, 136, .16);
+    }
+    .og__year {
+      position: absolute;
+      right: -46px;
+      top: 26px;
+      font-family: "Lora", Georgia, serif;
+      font-size: 250px;
+      line-height: .8;
+      letter-spacing: -.08em;
+      color: rgba(159, 85, 96, .06);
+      -webkit-text-stroke: 1.3px rgba(159, 85, 96, .14);
+      transform: rotate(-7deg);
+      user-select: none;
+    }
+    .og__visual {
+      position: absolute;
+      right: 78px;
+      bottom: 86px;
+      width: 400px;
+      height: 300px;
+      z-index: 2;
+      transform: rotate(-3deg);
+    }
+    .env {
+      position: absolute;
+      inset: 0;
+      border-radius: 10px;
+      background: linear-gradient(150deg, #f2e0c9 0%, #e6cfb1 55%, #dbc09e 100%);
+      box-shadow: 0 32px 50px -30px rgba(70, 48, 32, .55);
+    }
+    .env::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 10px;
+      background: linear-gradient(135deg, rgba(255,255,255,.36), transparent 48%);
+    }
+    .env__front {
+      position: absolute;
+      inset: 0;
+      border-radius: 0 0 10px 10px;
+      background: linear-gradient(160deg, #f4e4cf 0%, #e8d2b6 50%, #ddc19f 100%);
+      clip-path: polygon(0 35%, 50% 67%, 100% 35%, 100% 100%, 0 100%);
+    }
+    .env__front::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(130deg, rgba(255,255,255,.3), transparent 50%);
+      clip-path: inherit;
+    }
+    .env__flap {
+      position: absolute;
+      inset: 0;
+      border-radius: 10px 10px 0 0;
+      background: linear-gradient(180deg, #f2e1ca, #e2caaa);
+      clip-path: polygon(0 0, 100% 0, 50% 63%);
+    }
+    .env__stamp {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      width: 68px;
+      height: 82px;
+      border: 1.5px dashed rgba(120, 83, 56, .5);
+      background: rgba(255, 251, 245, .86);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      color: #9f5560;
+      transform: rotate(3deg);
+    }
+    .env__stamp b {
+      font-family: "Lora", Georgia, serif;
+      font-size: 13px;
+      letter-spacing: .04em;
+    }
+    .env__stamp svg { width: 24px; height: 24px; }
+    .env__address {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 30px;
+      text-align: center;
+      font-family: "Lora", Georgia, serif;
+      font-size: 16px;
+      line-height: 1.5;
+      color: #5b4638;
+    }
+    .env__address em {
+      display: block;
+      font-family: "Dancing Script", cursive;
+      font-size: 23px;
+      font-style: normal;
+      color: #9f5560;
+    }
+    .seal {
+      position: absolute;
+      left: 50%;
+      top: 57%;
+      width: 86px;
+      height: 86px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 34% 28%, #bd727c, #9b4c58 60%, #833d48);
+      color: #f8e9e4;
+      display: grid;
+      place-items: center;
+      font-family: "Lora", Georgia, serif;
+      font-size: 17px;
+      transform: translate(-50%, -50%);
+      box-shadow: 0 10px 18px -8px rgba(110, 45, 56, .5), inset 0 0 0 5px rgba(255,255,255,.16);
+    }
+    .seal::before {
+      content: "";
+      position: absolute;
+      inset: 8px;
+      border: 1px solid rgba(255,255,255,.38);
+      border-radius: 50%;
+    }
+    .sprig {
+      position: absolute;
+      left: -58px;
+      bottom: -54px;
+      width: 190px;
+      color: #93a68b;
+      transform: rotate(12deg);
+    }
+    .sprig--two {
+      left: auto;
+      right: -58px;
+      top: -66px;
+      bottom: auto;
+      width: 150px;
+      color: #c77f88;
+      transform: rotate(160deg);
+      opacity: .7;
+    }
+  </style>
+</head>
+<body>
+  <div class="og" id="og-card">
+    <span class="og__year">20.10</span>
+
+    <div class="og__copy">
+      <p class="og__eyebrow">Lớp 10A17 · 20.10.2026</p>
+      <h1>Hộp thư <em>mùa thu</em></h1>
+      <p class="og__script">Gửi các cô và các bạn nữ.</p>
+      <p class="og__desc">Tập thể nhóm con trai lớp 10A17 gửi tặng các cô giáo và các bạn nữ — một chút mùa thu, một lời cảm ơn chung.</p>
+    </div>
+
+    <div class="og__visual">
+      <div class="env">
+        <div class="env__flap"></div>
+        <div class="env__front"></div>
+        <div class="env__stamp">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <ellipse cx="12" cy="6.8" rx="2.2" ry="3.2"></ellipse>
+            <ellipse cx="12" cy="6.8" rx="2.2" ry="3.2" transform="rotate(72 12 12)"></ellipse>
+            <ellipse cx="12" cy="6.8" rx="2.2" ry="3.2" transform="rotate(144 12 12)"></ellipse>
+            <ellipse cx="12" cy="6.8" rx="2.2" ry="3.2" transform="rotate(216 12 12)"></ellipse>
+            <ellipse cx="12" cy="6.8" rx="2.2" ry="3.2" transform="rotate(288 12 12)"></ellipse>
+            <circle cx="12" cy="12" r="1.8"></circle>
+          </svg>
+          <b>20.10</b>
+        </div>
+        <div class="env__address">Gửi các cô và các bạn nữ<em>của lớp 10A17</em></div>
+        <div class="seal">20·10</div>
+      </div>
+    </div>
+
+    <div class="og__bottom"><span></span> Một lời chung · Thật nhiều yêu thương</div>
+
+    <svg class="sprig" viewBox="0 0 200 340" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M103 332c-8-70 7-130-13-190C78 105 88 62 111 22"></path>
+      <path d="M96 264c-27-2-47-18-55-45 26 2 45 17 55 45Z"></path>
+      <path d="M104 232c26-6 43-24 47-50-25 6-41 23-47 50Z"></path>
+      <path d="M92 198c-23-5-38-21-42-44 23 5 38 20 42 44Z"></path>
+      <path d="M102 164c21-8 34-25 36-47-21 8-33 25-36 47Z"></path>
+      <path d="M87 126c-19-8-30-23-31-44 19 8 30 23 31 44Z"></path>
+      <path d="M101 96c18-10 28-26 28-47-18 10-27 26-28 47Z"></path>
+      <g>
+        <ellipse cx="111" cy="24" rx="9" ry="14"></ellipse>
+        <ellipse cx="111" cy="24" rx="9" ry="14" transform="rotate(72 111 24)"></ellipse>
+        <ellipse cx="111" cy="24" rx="9" ry="14" transform="rotate(144 111 24)"></ellipse>
+        <ellipse cx="111" cy="24" rx="9" ry="14" transform="rotate(216 111 24)"></ellipse>
+        <ellipse cx="111" cy="24" rx="9" ry="14" transform="rotate(288 111 24)"></ellipse>
+        <circle cx="111" cy="24" r="4.5"></circle>
+      </g>
+    </svg>
+    <svg class="sprig sprig--two" viewBox="0 0 200 340" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M103 332c-8-70 7-130-13-190C78 105 88 62 111 22"></path>
+      <path d="M96 264c-27-2-47-18-55-45 26 2 45 17 55 45Z"></path>
+      <path d="M104 232c26-6 43-24 47-50-25 6-41 23-47 50Z"></path>
+      <path d="M92 198c-23-5-38-21-42-44 23 5 38 20 42 44Z"></path>
+      <path d="M102 164c21-8 34-25 36-47-21 8-33 25-36 47Z"></path>
+      <path d="M87 126c-19-8-30-23-31-44 19 8 30 23 31 44Z"></path>
+      <path d="M101 96c18-10 28-26 28-47-18 10-27 26-28 47Z"></path>
+      <g>
+        <ellipse cx="111" cy="24" rx="9" ry="14"></ellipse>
+        <ellipse cx="111" cy="24" rx="9" ry="14" transform="rotate(72 111 24)"></ellipse>
+        <ellipse cx="111" cy="24" rx="9" ry="14" transform="rotate(144 111 24)"></ellipse>
+        <ellipse cx="111" cy="24" rx="9" ry="14" transform="rotate(216 111 24)"></ellipse>
+        <ellipse cx="111" cy="24" rx="9" ry="14" transform="rotate(288 111 24)"></ellipse>
+        <circle cx="111" cy="24" r="4.5"></circle>
+      </g>
+    </svg>
+  </div>
+</body>
+</html>
