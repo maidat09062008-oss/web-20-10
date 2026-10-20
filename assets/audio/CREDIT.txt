@@ -1,0 +1,17 @@
+GREENSLEEVES — nhạc nền cho website "Hộp thư mùa thu — 10A17"
+
+Tác phẩm: Greensleeves (English folk melody)
+Biểu diễn: ẩn danh
+Thu âm: Dieter Leckschat
+Nguồn: https://commons.wikimedia.org/wiki/File:Greensleeves_for_solo_piano.wav
+Giấy phép: Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+           https://creativecommons.org/licenses/by-sa/4.0/
+
+Tệp dùng trong website: assets/audio/greensleeves.mp3
+
+Ghi chú:
+- Website chỉ phát nhạc sau khi người dùng bấm nút.
+- Attribution được hiển thị trong trình phát nhạc (mục "Bật một bản nhạc")
+  và ở cuối trang.
+- Nếu thay bản nhạc khác, cập nhật credit trong assets/js/data.js,
+  index.html và tệp này.
